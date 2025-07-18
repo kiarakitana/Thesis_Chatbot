@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.samsung.android.service.health.tracking.libraries" >
+
+    <uses-sdk android:minSdkVersion="26" />
+
+    <queries>
+        <package android:name="com.sec.android.app.samsungapps" />
+    </queries>
+    <queries>
+        <package android:name="com.samsung.android.service.health" />
+    </queries>
+
+</manifest>

@@ -1,0 +1,7 @@
+{
+  "title": "Rate Your Emotions",
+  "valence_label": "How pleasant did you feel?",
+  "arousal_label": "How energized or alert did you feel?",
+  "dominance_label": "How in control or empowered did you feel?",
+  "submit": "Submit"
+}
