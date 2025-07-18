@@ -44,7 +44,7 @@ This is the Aire chatbot.
 1. Open Android Studio
 2. Select "Open an existing project" and navigate to the `Emoly-main` directory
 3. Allow Gradle sync to complete
-4. Configure API endpoint in `ApiService.kt` to point to your server address
+4. Configure `api_service.dart ` and `network_security_config.xml` to point to your server address
 5. Build and deploy the app to your Android device:
    - Connect your Android device via USB with debugging enabled
    - Select your device from the device dropdown
@@ -58,7 +58,8 @@ This is the biometric sensor app. It has a wearable device component and a mobil
 2. Select "Open an existing project" and navigate to the `Heart Rate Data Transfer` directory
 3. Allow Gradle sync to complete
 4. Ensure the Samsung Health SDK permissions are properly configured
-5. Build and deploy the app to your Android devices (wearable device and mobile device):
+5. Configure `BiometricDataService.kt` and `network_security_config.xml` to point to your server address
+6. Build and deploy the app to your Android devices (wearable device and mobile device):
    - Connect your Android device via USB with debugging enabled
    - Select your device from the device dropdown
    - Click "Run" (green play button)
