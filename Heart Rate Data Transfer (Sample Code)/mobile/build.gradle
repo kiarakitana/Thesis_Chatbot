@@ -1,0 +1,71 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'org.jetbrains.kotlin.plugin.serialization'
+    id 'com.google.dagger.hilt.android'
+    id 'kotlin-kapt'
+}
+
+android {
+    namespace 'com.samsung.health.hrdatatransfer'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.samsung.health.hrdatatransfer"
+        minSdk 30
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+    buildFeatures {
+        compose true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    java {
+        toolchain {
+            languageVersion.set(JavaLanguageVersion.of(17))
+        }
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion "1.5.11"
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.13.1'
+    implementation platform('org.jetbrains.kotlin:kotlin-bom:1.9.23')
+    implementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1'
+    // compose
+    implementation "androidx.compose.ui:ui:$compose_version"
+    implementation 'androidx.compose.material3:material3:1.2.1'
+    implementation "androidx.compose.foundation:foundation:$compose_version"
+    implementation "androidx.compose.runtime:runtime:$compose_version"
+    implementation 'androidx.activity:activity-compose:1.9.0'
+    // tests
+    testImplementation 'junit:junit:4.13.2'
+    // Wearable Data Layer
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.7.1'
+    implementation 'com.google.android.gms:play-services-wearable:18.1.0'
+    // hilt
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-compiler:$hilt_version"
+
+    implementation project(':common')
+}
+
+kapt {
+    correctErrorTypes true
+}
