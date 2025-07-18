@@ -39,6 +39,8 @@ This repository contains a therapeutic chatbot application integrated with a bio
 
 #### Therapeutic Chatbot App (Emoly-main)
 
+This is the Aire chatbot.
+
 1. Open Android Studio
 2. Select "Open an existing project" and navigate to the `Emoly-main` directory
 3. Allow Gradle sync to complete
@@ -49,6 +51,8 @@ This repository contains a therapeutic chatbot application integrated with a bio
    - Click "Run" (green play button)
 
 #### Biometric Data Collection App (Heart Rate Data Transfer)
+
+This is the biometric sensor app. It has a wearable device component and a mobile device component.
 
 1. Open Android Studio
 2. Select "Open an existing project" and navigate to the `Heart Rate Data Transfer` directory
